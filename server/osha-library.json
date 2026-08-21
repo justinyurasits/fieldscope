@@ -1,0 +1,55 @@
+[
+  {
+    "subpart": "Subpart E — Personal Protective and Life Saving Equipment",
+    "trades": ["general", "electrical", "scaffolding", "excavation", "roofing", "concrete"],
+    "sections": [
+      { "code": "1926.95(a)", "title": "PPE required", "req": "Protective equipment must be provided, used, and maintained wherever hazards capable of causing injury are present." },
+      { "code": "1926.100(a)", "title": "Head protection", "req": "Hard hats required in areas where there is a possible danger of head injury from impact or falling objects." },
+      { "code": "1926.102(a)", "title": "Eye and face protection", "req": "Eye and face protection required where machines or operations present a hazard of flying particles, dust, or radiant energy." }
+    ]
+  },
+  {
+    "subpart": "Subpart C — General Safety and Health Provisions",
+    "trades": ["general", "electrical", "scaffolding", "excavation", "roofing", "concrete"],
+    "sections": [
+      { "code": "1926.20(b)(1)", "title": "Safety program", "req": "Employer must initiate and maintain a program that provides for frequent inspections of jobsites and equipment." },
+      { "code": "1926.21(b)(2)", "title": "Hazard recognition training", "req": "Employees must be instructed to recognize and avoid unsafe conditions relevant to their specific work assignment." }
+    ]
+  },
+  {
+    "subpart": "Subpart K — Electrical",
+    "trades": ["electrical"],
+    "sections": [
+      { "code": "1926.404(f)(6)", "title": "Grounding", "req": "Non-current-carrying metal parts of equipment must be effectively grounded." },
+      { "code": "1926.405(b)(1)", "title": "Enclosure openings", "req": "Unused openings in cabinets, boxes, and fittings must be effectively closed." },
+      { "code": "1926.416(e)(1)", "title": "Worn or frayed cords", "req": "Worn or frayed electric cords or cables may not be used." }
+    ]
+  },
+  {
+    "subpart": "Subpart L — Scaffolds",
+    "trades": ["scaffolding"],
+    "sections": [
+      { "code": "1926.451(g)(1)", "title": "Fall protection on scaffolds", "req": "Each employee on a scaffold more than 10 feet above a lower level must be protected by a guardrail or personal fall arrest system." },
+      { "code": "1926.451(e)(1)", "title": "Scaffold access", "req": "A ladder or equivalent safe access must be provided when the scaffold platform is more than 2 feet above or below a point of access." },
+      { "code": "1926.454(a)", "title": "Scaffold training", "req": "Each employee who performs work on a scaffold must be trained by a qualified person on scaffold hazards and controls." }
+    ]
+  },
+  {
+    "subpart": "Subpart M — Fall Protection",
+    "trades": ["roofing", "general", "scaffolding"],
+    "sections": [
+      { "code": "1926.501(b)(1)", "title": "Unprotected sides and edges", "req": "Fall protection required for employees on a walking/working surface with an unprotected side or edge 6 feet or more above a lower level." },
+      { "code": "1926.502(d)", "title": "Personal fall arrest systems", "req": "Fall arrest systems, when used, must limit maximum arresting force and be rigged so an employee cannot free fall more than 6 feet." },
+      { "code": "1926.503(a)(1)", "title": "Fall protection training", "req": "Employer must provide a training program for each employee exposed to fall hazards, covering recognition and control of those hazards." }
+    ]
+  },
+  {
+    "subpart": "Subpart P — Excavations",
+    "trades": ["excavation"],
+    "sections": [
+      { "code": "1926.651(c)(2)", "title": "Means of egress", "req": "A stairway, ladder, ramp, or other safe means of egress required in trench excavations 4 feet or more in depth, within 25 feet of workers." },
+      { "code": "1926.651(k)(1)", "title": "Daily inspection", "req": "A competent person must inspect excavations daily, before work begins, for evidence of hazardous conditions." },
+      { "code": "1926.652(a)(1)", "title": "Cave-in protection", "req": "Employees in an excavation must be protected from cave-ins by an adequate protective system." }
+    ]
+  }
+]
