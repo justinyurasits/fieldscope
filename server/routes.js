@@ -6,6 +6,15 @@ const claude = require('./claude');
 const upload = multer({ limits: { fileSize: 10 * 1024 * 1024, files: 5 } });
 const router = express.Router();
 
+const rateLimit = require('express-rate-limit');
+const claudeCallLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000,
+  max: Number(process.env.CLAUDE_CALLS_PER_HOUR || 30),
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: 'Too many requests from this connection in the last hour. Try again later.' }
+});
+
 function addDays(date, days) {
   const d = new Date(date);
   d.setDate(d.getDate() + days);
@@ -154,7 +163,7 @@ router.get('/protocols/:id', async (req, res, next) => {
   } catch (err) { next(err); }
 });
 
-router.post('/protocols', async (req, res, next) => {
+router.post('/protocols', claudeCallLimiter, async (req, res, next) => {
   try {
     const { subId, siteId, taskDescription } = req.body;
     if (!subId || !siteId || !taskDescription || !taskDescription.trim()) {
@@ -265,7 +274,7 @@ router.patch('/reviews/:id/complete', async (req, res, next) => {
 
 // ---- photo checks ----
 
-router.post('/protocols/:id/photo-checks', upload.array('photos', 5), async (req, res, next) => {
+router.post('/protocols/:id/photo-checks', claudeCallLimiter, upload.array('photos', 5), async (req, res, next) => {
   try {
     const { id } = req.params;
     if (!req.files || req.files.length === 0) return res.status(400).json({ error: 'at least one photo is required' });
