@@ -24,7 +24,7 @@ None of these are training problems. They're the predictable result of complianc
 - **Site user**: Superintendent — reviews and routes flagged status, spot-checks the record, doesn't want a new system to babysit.
 - **Field user**: Subcontractor's competent person / safety representative — describes the task and submits the daily photo. This has to work in under a couple of minutes with zero training, or the entire compliance record downstream is fiction.
 
-*(Full reasoning in `fieldscope-personas.md`.)*
+*(Full reasoning in [personas.md](personas.md).)*
 
 ## How it works
 
