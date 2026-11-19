@@ -1,6 +1,6 @@
 # fieldscope
 
-<!-- standard: design/_template/repo/CLAUDE.md v1
+<!-- standard: design/_template/repo/CLAUDE.md v1.2
      Sections 1–6 are the standard: copy them unchanged, filling in only the <angle brackets>.
      Section 7 is this repository's own. To change a standard rule here, say so under
      "Overrides" in section 7, with the reason. -->
@@ -14,20 +14,21 @@ Status: prototype.
 ## 2. Design
 
 The design docs for this repository are in the `design` repository, cloned next to this
-one, at `../design/fieldscope/`. Pull it before planning.
+one, at `../design/construction-os-demos/fieldscope/`. Pull it before planning. In a git worktree,
+`../design` means next to the main checkout, not next to the worktree.
 
-Before proposing work, read in this order (skip any the project doesn't have yet; it has
-no component folder yet, so only `brief.md` exists today):
+Before proposing work, read in this order (skip any the project doesn't have yet):
 
-1. `../design/fieldscope/brief.md`: why it exists and for whom
-2. `../design/fieldscope/product-spec.md`: what the product must do, by capability ID
-3. `../design/fieldscope/architecture.md` and `principles.md`: how the parts fit, and
+1. `../design/construction-os-demos/brief.md`: why it exists and for whom
+2. `../design/construction-os-demos/product-spec.md`: what the product must do, by capability ID
+3. `../design/construction-os-demos/architecture.md` and `principles.md`: how the parts fit, and
    the rules every design decision follows
-4. `../design/fieldscope/<component>/spec.md`: what this component must do
-5. `../design/fieldscope/<component>/design.md`: how it works, and the decision log
-6. `../design/fieldscope/<component>/<slice>-design.md`: the build design for the slice
+4. `../design/construction-os-demos/fieldscope/brief.md` and `spec.md`: who this component is for,
+   and what it must do
+5. `../design/construction-os-demos/fieldscope/design.md`: how it works, and the decision log
+6. `../design/construction-os-demos/fieldscope/<slice>-design.md`: the build design for the slice
    the issue belongs to
-7. `../design/fieldscope/<component>/plan.md`: the milestones still ahead
+7. `../design/construction-os-demos/fieldscope/plan.md`: the milestones still ahead
 
 - **Design leads, code follows.** Never edit design docs from this repository. If the
   work needs a change to what the product does, to a requirement or to the architecture,
