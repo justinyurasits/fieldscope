@@ -1,6 +1,9 @@
 # Fieldscope — sub safety compliance & validation
 
-A working pilot-scope prototype: real Postgres persistence, a real API, and a UI meant to be used daily, not clicked through once. See [docs/product-concept.md](docs/product-concept.md) for the product thinking behind it — read that first if you haven't — and [docs/personas.md](docs/personas.md) for who it's for. Status: prototype. The design index for all projects is in [design/fieldscope](https://github.com/justinyurasits/design/tree/main/fieldscope).
+A working pilot-scope prototype: real Postgres persistence, a real API, and a UI meant to be used daily, not clicked through once. The product thinking behind it and who it's for are in the design repo: [design/fieldscope/brief.md](https://github.com/justinyurasits/design/blob/main/fieldscope/brief.md). Read that first if you haven't.
+
+**Status:** prototype  
+**Design:** [design/fieldscope](https://github.com/justinyurasits/design/tree/main/fieldscope)
 
 ## What's actually real here, and what isn't
 
