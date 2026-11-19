@@ -109,15 +109,20 @@ issue or milestone is done, and about every ten turns of work since you last ask
 
 ## 7. This repository
 
-- **Layout:** `server/` is the Express API and Postgres access (`routes.js`,
-  `claude.js` for protocol generation and photo checks, `schema.sql`, `migrate.js`,
-  `seed.js`, `osha-library.json`, `test-smoke.js`); `public/` is the frontend, plain
-  HTML/CSS/JS with no build step. README.md describes the same folders for people; when
-  a folder is added, moved or retired, update both.
-- **Run:** `npm install`, `npm run migrate`, `npm run seed`, `npm start` (or
-  `npm run dev`). Needs `DATABASE_URL` and `ANTHROPIC_API_KEY` in `.env`; see README.md.
-- **Checks:** `npm test` (the smoke test against an in-memory Postgres) on every pull
+- **Layout:** `server/` is the Express API and Postgres access (`index.js`,
+  `routes.js`, `auth.js` for the optional login gate, `db.js`, `claude.js` for protocol
+  generation and photo checks, `schema.sql`, `migrate.js`, `seed.js`,
+  `osha-library.json`, `test-smoke.js`), and holds `package.json`, `.env` and
+  `.env.example`; `public/` is the frontend, plain HTML/CSS/JS with no build step.
+  README.md describes the same folders for people; when a folder is added, moved or
+  retired, update both.
+- **Run:** from the repo root, `cd server && npm install && npm run migrate && npm run seed && npm start`
+  (or `npm run dev`). Needs `DATABASE_URL` and `ANTHROPIC_API_KEY` in `server/.env`;
+  every setting is in README.md, "Configuration". A change that adds or removes an
+  environment variable updates `server/.env.example` and that table in the same pull
   request.
+- **Checks:** `npm --prefix server test` from the repo root (the smoke test against an
+  in-memory Postgres, Claude calls stubbed) on every pull request.
 - **Conventions:**
   - An AI-generated protocol stays a draft until a named person approves it.
   - Training tracking covers task-specific topics only; it never stands in for OSHA-10/30
