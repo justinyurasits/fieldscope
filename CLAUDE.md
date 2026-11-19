@@ -129,4 +129,10 @@ issue or milestone is done, and about every ten turns of work since you last ask
     outreach cards.
   - README.md's "Known gaps" section stays current: a change that closes or opens a gap
     updates it in the same pull request.
-- **Overrides:** none.
+- **Overrides:**
+  - **`.env.example` location.** Standard: the repository's starting files, `.env.example`
+    among them, sit at the repository root (`design/_template/repo/`). Here:
+    `.env.example` lives in `server/`, with no copy at the root. Why: the server loads
+    `.env` from `server/`, where `package.json` is and npm runs, so an example at the
+    root points to the wrong place for secrets. Revisit if the repository gets a root
+    `package.json`, or merges into a `construction-os-demos` repository.
